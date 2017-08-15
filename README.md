@@ -1,5 +1,11 @@
 # Terraform
 
+### Instructions
+
+ https://www.terraform.io/intro/getting-started/install.html
+
+---
+
 **export AWS_ACCESS_KEY_ID="anaccesskey"**
 
 **export AWS_SECRET_ACCESS_KEY="asecretkey"**
