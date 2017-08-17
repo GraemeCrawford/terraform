@@ -48,11 +48,3 @@ $ terraform plan -var 'access_key=foo' -var 'secret_key=bar'
 ### Explicit dependencies:
 
 Implicit dependencies work well and are usually all you ever need. However, you can also specify explicit dependencies with the depends_on parameter which is available on any resource. For example, we could modify the "aws_eip" resource to the following, which effectively does the same thing and is redundant:
-
-#### Elastic IP
-```
-resource "aws_eip" "ip" {
-  instance   = "${aws_instance.example.id}"
-  depends_on = ["aws_instance.example"]
-}
-```
