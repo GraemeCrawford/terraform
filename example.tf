@@ -11,13 +11,6 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami           = "ami-0d063c6b"
   instance_type = "t2.micro"
-###
-# Add a provisioner to run on the host running terraform (local-exec), to print the IP address to a text file
-# Provisioner must be inside the resource block
-###
-  provisioner "local-exec" {
-    command = "echo ${aws_instance.example.public_ip} > ip_address.txt"
-  }
 }
 
 resource "aws_eip" "ip" {

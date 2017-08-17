@@ -1,0 +1,7 @@
+###
+# Add a provisioner to run on the host running terraform (local-exec), to print the IP address to a text file
+# Provisioner must be inside the resource block
+###
+  provisioner "local-exec" {
+    command = "echo ${aws_instance.example.public_ip} > ip_address.txt"
+  }
