@@ -5,6 +5,7 @@ provider "aws" {
   region     = "${var.region}"
 }
 
+
 ###
 # Create an AWS resrource - virtual machine (instance) named example and use the AMI ID for Centos 7 and instance type t2.micro which qualifies for free tier.
 ###
@@ -19,4 +20,13 @@ resource "aws_eip" "ip" {
 
 output "ip" {
   value = "${aws_eip.ip.public_ip}"
+}
+
+##
+# Using a module to create a security group
+##
+module "security-group" {
+  source = "./modules/security-group"
+  source_cidr_block = "${var.source_cidr_block}"
+  source_port = "${var.source_port}"
 }

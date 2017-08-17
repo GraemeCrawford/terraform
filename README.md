@@ -52,3 +52,7 @@ Implicit dependencies work well and are usually all you ever need. However, you 
 # **Modules**
 
 https://www.terraform.io/docs/modules/index.html
+
+### Get community modules here:
+
+https://github.com/terraform-community-modules
