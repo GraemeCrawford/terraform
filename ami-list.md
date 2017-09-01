@@ -14,6 +14,8 @@ Ubuntu 16.10: **ami-bc5b4ad8**
 
 Centos 7 1703_01: **ami-0d063c6b**
 
+RedHat 7.4" **ami-bb9a6bc2**
+
 ---
 
 ### EU (London)	eu-west-2
